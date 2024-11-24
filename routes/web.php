@@ -53,3 +53,6 @@ Route::middleware('check.login') -> group(function () {
 
 Route::get('/send-email', [SendEmailController::class, 'index']) -> name('kirim.email');
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
+Route::get('/products', function () {
+    return view('product_list');
+});
